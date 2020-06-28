@@ -1,8 +1,7 @@
-import styled, { DefaultTheme } from 'styled-components';
+import styled from 'styled-components';
 
 interface CardProps {
   total?: boolean;
-  theme: DefaultTheme;
 }
 
 export const Container = styled.div`
@@ -25,12 +24,10 @@ export const CardContainer = styled.section`
 `;
 
 export const Card = styled.div`
-  background: ${({ total, theme }: CardProps): string =>
-    total ? '#FF872C' : theme.colors.shape};
+  background: ${({ total }: CardProps): string => (total ? '#FF872C' : '#fff')};
   padding: 22px 32px;
   border-radius: 5px;
-  color: ${({ total, theme }: CardProps): string =>
-    total ? '#fff' : theme.colors.titles};
+  color: ${({ total }: CardProps): string => (total ? '#fff' : '#363F5F')};
 
   header {
     display: flex;
@@ -58,7 +55,7 @@ export const TableContainer = styled.section`
     border-spacing: 0 8px;
 
     th {
-      color: ${props => props.theme.colors.text};
+      color: #969cb3;
       font-weight: normal;
       padding: 20px 32px;
       text-align: left;
@@ -69,21 +66,21 @@ export const TableContainer = styled.section`
     td {
       padding: 20px 32px;
       border: 0;
-      background: ${props => props.theme.colors.shape};
+      background: #fff;
       font-size: 16px;
       font-weight: normal;
-      color: ${props => props.theme.colors.text};
+      color: #969cb3;
 
       &.title {
-        color: ${props => props.theme.colors.titles};
+        color: #363f5f;
       }
 
       &.income {
-        color: ${props => props.theme.colors.green};
+        color: #12a454;
       }
 
       &.outcome {
-        color: ${props => props.theme.colors.red};
+        color: #e83f5b;
       }
     }
 

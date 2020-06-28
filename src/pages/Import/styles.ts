@@ -12,12 +12,12 @@ export const Title = styled.h1`
   font-weight: 500;
   font-size: 36px;
   line-height: 54px;
-  color: ${props => props.theme.colors.titles};
+  color: #363f5f;
   text-align: center;
 `;
 
 export const ImportFileContainer = styled.section`
-  background: ${props => props.theme.colors.shape};
+  background: #fff;
   margin-top: 40px;
   border-radius: 5px;
   padding: 64px;
@@ -34,7 +34,7 @@ export const Footer = styled.section`
     align-items: center;
     font-size: 12px;
     line-height: 18px;
-    color: ${props => props.theme.colors.text};
+    color: #969cb3;
 
     img {
       margin-right: 5px;
